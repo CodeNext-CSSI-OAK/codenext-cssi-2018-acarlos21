@@ -1,5 +1,5 @@
 // Author: Anthony Carlos
-console.log("******************************************************");
+console.log("***********************************************************");
  let readLine = require('readline-sync');
  let cents = readLine.question('Hey Im a cash register... Give me an amount to change!');
 
@@ -17,4 +17,6 @@ console.log("dimes: " + dimes);
 
 let pennies = Math.floor(c / 1);
 console.log("pennies: " + pennies);
-console.log("******************************************************");
+readLine.question('Do you want a reciept?');
+console.log('Too bad :)');
+console.log("***********************************************************");
