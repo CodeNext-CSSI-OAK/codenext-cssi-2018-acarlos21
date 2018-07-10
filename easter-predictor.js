@@ -11,7 +11,7 @@ let h = Math.floor((19* a + b - d - g + 15) % 30);
 let i = Math.floor(c / 4);
 let k = Math.floor(c % 4);
 let r = Math.floor((32 + 2 * i - h - k) % 7);
-let m = Math.floor((a + 11 * h + 22 * r) % 451);
+let m = Math.floor((a + 11 * h + 22 * r) / 451);
 let n = Math.floor((h + r - 7 * m + 114) / 31);
 let p = Math.floor((h + r - 7 * m + 114) % 31);
 console.log("Y is " + y);
