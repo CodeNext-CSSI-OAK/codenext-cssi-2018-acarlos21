@@ -5,7 +5,8 @@ console.log("****************************************************************");
 
  let quarters = Math.floor(cents / 25);
  let a = Math.floor(cents % 25);
- console.log("quarters: " + quarters)
+ console.log("quarters: " + quarters);
+ cents -= quarters * 25;
 
 let dimes = Math.floor(a / 10);
 let b = Math.floor(cents % 10);
