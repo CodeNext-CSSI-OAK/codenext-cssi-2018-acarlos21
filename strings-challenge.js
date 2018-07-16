@@ -41,7 +41,11 @@ frontAgain("ed") → true
 
 
 function frontAgain(str) {
-
+  if(str.charAt(0) && str.charAt(1) === str.charAt(str.length - 1) && str.charAt(str.length - 2)){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Test this function.
@@ -62,7 +66,11 @@ deFront("away") → "aay"
 *******************************************************************************/
 
 function deFront(str) {
+  if(str.charAt(0) !== a){
+    str.substring(0, 1);
+  }else
 
+  if(str.charAt(1) !== b)
 }
 
 // Test this function.
