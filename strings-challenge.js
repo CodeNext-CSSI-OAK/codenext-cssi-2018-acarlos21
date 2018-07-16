@@ -1,4 +1,4 @@
-//Author: FirstName LastName
+//Author: Anthony Carlos
 
 /******************************************************************************
                                    withoutEnd()
@@ -15,7 +15,11 @@ withoutEnd("coding") → "odin"
 *******************************************************************************/
 
 function withoutEnd(str) {
+  if(str.length >= 2){
+    let lastChar = str.charAt(0);
+    let secondLastChar = str.charAt(str.length -1);
 
+  }
 }
 
 // Test this function.
