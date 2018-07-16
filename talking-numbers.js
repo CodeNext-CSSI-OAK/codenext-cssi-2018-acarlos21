@@ -173,7 +173,7 @@ function sayNumber(num) {
     } else{
       wordForm += sayTenNineteen(tens);
     }
-    if(ones > 0 tens !== 1) {
+    if(ones > 0 && tens !== 1) {
       if(tens >= 2) {
         wordForm += "-";
       }
