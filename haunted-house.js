@@ -5,17 +5,6 @@ console.log();
 console.log("*****************************************************************");
 console.log("                          HAUNTED HOUSE");
 console.log("                     A game by Anthony Carlos");
-console.log(`                            _
-                                       _|=|__________
-                                      /              \
-                                     /                \
-                                    /__________________\
-                                     ||  || /--\ ||  ||
-                                     ||[]|| | .| ||[]||
-                                   ()||__||_|__|_||__||()
-                                  ( )|-|-|-|====|-|-|-|( )
-                                  ^^^^^^^^^^====^^^^^^^^^^^
-`);
 console.log("*****************************************************************");
 console.log("You are standing in front of a spooky haunted house.");
 console.log("You hear what sounds like screaming coming from inside the house.");

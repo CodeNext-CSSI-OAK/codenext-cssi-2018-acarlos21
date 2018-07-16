@@ -1,4 +1,4 @@
-// Author: FirstName LastName
+// Author: Anthony Carlos
 var readline = require("readline-sync");
 
 /******************************************************************************
@@ -9,6 +9,13 @@ var readline = require("readline-sync");
 *******************************************************************************/
 
 function printGreeting() {
+console.log(`------------------------------------------
+             Talking Numbers
+
+           By: Anthony Carlos
+------------------------------------------`);
+
+
 
 }
 
@@ -23,7 +30,27 @@ function printGreeting() {
   sayZeroNine(13) → ""
 *******************************************************************************/
 function sayZeroNine(num) {
-
+  if(num === 1){
+    return "one";
+  }else if( num === 2){
+    return "two";
+  }else if (num === 3){
+    return "three";
+  }else if (num === 4){
+    return "four";
+  }else if (num === 5){
+    return "five";
+  }else if (num === 6){
+    return "six";
+  }else if (num === 7){
+    return "seven";
+  }else if (num === 8){
+    return "eight";
+  }else if (num === 9){
+    return "nine";
+  }else{
+    return "";
+  }
 }
 
 /******************************************************************************
@@ -37,7 +64,29 @@ function sayZeroNine(num) {
   sayTenNineteen(25) → ""
 *******************************************************************************/
 function sayTenNineteen(num) {
-
+  if (num === 10){
+    return "ten";
+  }else if (num === 11){
+    return "eleven";
+  }else if (num === 12){
+    return "twelve";
+  }else if (num === 13){
+    return "thirteen";
+  }else if (num === 14){
+    return "fourteen";
+  }else if (num === 15){
+    return "fifteen";
+  }else if (num === 16){
+    return "sixteen";
+  }else if (num === 17){
+    return "seventeen";
+  }else if (num === 18){
+    return "eighteen";
+  }else if (num === 19){
+    return "nineteen";
+  }else{
+    return "";
+  }
 }
 
 /******************************************************************************
@@ -51,7 +100,25 @@ function sayTenNineteen(num) {
   sayTwentyNinety(1) → ""
 *******************************************************************************/
 function sayTwentyNinety(num) {
-
+  if(num === 2){
+    return "twenty";
+  }else if (num === 3){
+    return "thirty";
+  }else if (num === 4){
+    return "fourty";
+  }else if (num === 5){
+    return "fifty";
+  }else if (num === 6){
+    return "sixty";
+  }else if (num === 7){
+    return "seventy";
+  }else if (num === 8){
+    return "eighty";
+  }else if (num === 9){
+    return "ninety"
+  }else{
+    return "";
+  }
 }
 
 /******************************************************************************
@@ -78,7 +145,41 @@ function sayTwentyNinety(num) {
   sayNumber(75) → "seventy-five"
 *******************************************************************************/
 function sayNumber(num) {
+  let wordForm = "";
 
+  if(num === 0){
+    wordForm = "zero";
+  }else{
+
+    let thousands = Math.floor(num / 1000);
+    let hundreds = Math.floor((num % 1000)/100);
+    let tens = Math.floor((num % 100)/10);
+    let ones = Math.floor(num % 10);
+
+    // If there is a thousands place...
+      // Add on ???-thousands to wordForm.
+    if(thousands > 0){
+      thousandNum = sayZeroNine(thousands) + "-thousand";
+      wordForm += thousandNum + " ";
+    }
+
+    if(hundreds > 0){
+      hundredNum = sayZeroNine(hundreds) + "-hundred";
+      wordForm += hundredNum + " ";
+    }
+
+    if(tens === 1){
+      wordForm += sayTenNineteen(tens * 10 + ones);
+    } else{
+      wordForm += sayTenNineteen(tens);
+    }
+    if(ones > 0 tens !== 1) {
+      if(tens >= 2) {
+        wordForm += "-";
+      }
+    }
+  }
+  return wordForm;
 }
 
 /******************************************************************************
@@ -87,7 +188,12 @@ function sayNumber(num) {
   number in word form.
 *******************************************************************************/
 function run() {
-
+  printGreeting();
+  let userNum = Number(readline.question("Gimme a number between 1 and 9999 and you can see the word form:"));
+  //sayZeroNine();
+  //sayTenNineteen();
+  //sayTwentyNinety();
+  console.log(sayNumber(userNum));
 }
 
 // Run the program!
