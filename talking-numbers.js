@@ -177,6 +177,7 @@ function sayNumber(num) {
       if(tens >= 2) {
         wordForm += "-";
       }
+      wordForm += sayZeroNine(ones);
     }
   }
   return wordForm;
@@ -190,10 +191,8 @@ function sayNumber(num) {
 function run() {
   printGreeting();
   let userNum = Number(readline.question("Gimme a number between 1 and 9999 and you can see the word form:"));
-  //sayZeroNine();
-  //sayTenNineteen();
-  //sayTwentyNinety();
-  console.log(sayNumber(userNum));
+  console.log("Word Form: " + sayNumber(userNum));
+  console.log("Don't Mess With Meee");
 }
 
 // Run the program!
