@@ -1,8 +1,8 @@
-// Author: FirstName LastName
+// Author: Anthony Carlos
 var readline = require("readline-sync");
 
 // global variables
-var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+let firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 
 /******************************************************************************
                                   getNewFirstName()
@@ -13,7 +13,7 @@ var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 *******************************************************************************/
 
 function getNewFirstName() {
-
+  return firstName.substring(0,3) + lastName.substring(0,2).toLowerCase();
 }
 
 /******************************************************************************
@@ -25,7 +25,7 @@ function getNewFirstName() {
 *******************************************************************************/
 
 function getNewLastName() {
-
+  return momMaidenName.substring(0,2) + cityBorn.substring(0,2).toLowerCase();
 }
 
 /******************************************************************************
@@ -36,7 +36,10 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
-
+  let thirdToLast = lastName.charAt(lastName.length - 3);
+  let secondToLast = lastName.charAt(lastName.length - 2);
+  let last = lastName.charAt(lastName.length - 1).toUpperCase();
+  return (last + secondToLast + thirdToLast) + dreamCar;
 }
 
 /******************************************************************************
@@ -47,7 +50,7 @@ function getTitle() {
 *******************************************************************************/
 
 function getHonorific() {
-
+  return getTitle() + " of " + street;
 }
 
 /******************************************************************************
@@ -61,6 +64,21 @@ function getHonorific() {
 *******************************************************************************/
 
 function run() {
+  console.log(`**********************************************************
+                  Fantasy Name Generator
+                    By: Anthony Carlos
+**********************************************************`);
+ firstName = readline.question("What is your first name?:");
+ lastName = readline.question("What is your last name?:");
+ momMaidenName = readline.question("What is your mom's maiden mame?:");
+ cityBorn = readline.question("What city were you born in?:");
+ dreamCar = readline.question("What is the make of your dream car?:");
+ street = readline.question("What street do you live on?:");
+ let fantasyName = getNewFirstName() + " " +getNewLastName() + " " + getHonorific();
+ console.log("Your fantasy name is " + fantasyName);
+ console.log(`**********************************************************
+                  Enjoy it lad 😘
+**********************************************************`);
 
 }
 
