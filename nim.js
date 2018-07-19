@@ -32,7 +32,7 @@ function printGreeting() {
                         by: Anthony Carlos
 *****************************************************************
 `);
-  
+
 }
 
 /******************************************************************************
@@ -70,12 +70,12 @@ function setupGame() {
 
 function printStones() {
   let stones = "";
-  for(let i = 0;stonesRemaining; i++) {
-    stones += "0";
+  for(let i = 0; i < stonesRemaining; i++) {
+    stones += "0 ";
 
   }
   console.log(stones);
-  console.log("Number of Stones remaining " + stones);
+  console.log("Number of Stones remaining " + stonesRemaining);
 }
 
 /******************************************************************************
@@ -174,12 +174,12 @@ function run() {
     while(stonesRemaining > 0){
       printStones();
       removeStones();
-      }
-      processResult();
     }
-    console.log("Baiiii");
+    processResult();
   }
+  console.log("Baiiii");
 }
+
 
 // Run the program!
 run();
